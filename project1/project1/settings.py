@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wg3@ie9l1l31ow+0ui=tnk1va3s2icyv6k640j#g=*lg&mm7u$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -117,14 +117,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
 
 STATICFILES_DIRS = [
     BASE_DIR /'static',
 ]
 
-# Logging settings
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-LOGGING = {
-   'version': 1,
-    'disable_existing_loggers': False,
-   
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

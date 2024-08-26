@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App1: Details view</title>
+  </head>
+  <body>
+    <h1>Task Details</h1>
+    <div>
+      <p>Title: {{task.title }}</p>
+      <p>Description: {{task.description }}</p>
+      <p>Created: {{task.created_at }}</p>
+      <p>Due: {{task.due_date }}</p>
+      <p>Status: {{task.status }}</p>
+      <P>
+        <a href="{% url 'update' task.id %}">Update task</a>
+      </P>
+      
+      <P>
+        <a href="{% url 'delete' task.id %}">Delete task</a>
+      </P>
+      
+      <P>
+        <a href="{% url "task" %}">Back to task list</a>
+      </P>
+      
+    </div>
+  </body>
+</html>
